@@ -1,9 +1,11 @@
 .App {
   text-align: center;
+  background-color: #140524;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
+  /* Reduced size for better responsiveness */
   pointer-events: none;
 }
 
@@ -13,14 +15,34 @@
   }
 }
 
+.App-header h1 {
+  font-size: 4vmax;
+  /* Adjusted font size based on viewport width */
+  background: -webkit-linear-gradient(blue, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 0px;
+}
+
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 2vmax;
+  /* Adjusted font size based on viewport width */
+  color: white;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vmax;
+  /* Adjusted font size based on viewport width */
   color: white;
 }
 
@@ -32,7 +54,110 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+#core-concepts {
+  padding: 2rem;
+  /* Use a fixed padding for better responsiveness */
+  border-radius: 6px;
+  color: white;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); */
+  font-size: 1rem;
+  /* Adjusted font size for smaller screens */
+}
+
+#core-concepts h2 {
+  text-align: center;
+  font-family: "Roboto Codensed", sans-serif;
+  margin: 0 0 1.5rem 0;
+  color: #a18aba;
+  font-size: 2rem;
+  /* Adjusted font size for smaller screens */
+}
+
+.examples h2 {
+  font-family: "Roboto Codensed", sans-serif;
+  margin: 0 0 1.5rem 0;
+  color: #a18aba;
+  font-size: 1.5rem;
+  /* Adjusted font size for smaller screens */
+}
+
+#core-concepts ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  flex: 1;
+}
+
+@media (max-width: 1250px) {
+  #core-concepts ul {
+    flex-wrap: wrap;
+  }
+}
+
+#examples button {
+  font-size: 1rem;
+  /* Adjusted font size for smaller screens */
+  background-color: transparent;
+  color: #A18ABA;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  /* Adjusted padding for better touch interaction */
+}
+
+#examples button:hover {
+  color: #f0f0f0;
+}
+
+#examples li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#examples h2 {
+  text-align: left;
+  margin-left: 4rem;
+  /* Adjusted margin for smaller screens */
+}
+
+#examples menu {
+  text-align: left;
+  margin-left: 2rem;
+  /* Adjusted margin for smaller screens */
+}
+
+#tab-content {
+  text-align: left;
+  margin-left: 5%;
+  width: 80%;
+  background-color: #201033;
+
+}
+
+#tab-content h3 {
+  padding: 2vmin 0px 0px 2vmin;
+}
+
+#tab-content p {
+  font-size: 1.2vmax;
+  margin-left: 4vmin;
+}
+
+#tab-content pre {
+  font-size: 1.2vmax;
+  padding: 0 0 50px 30px;
+}
+
+#examples menu button.active {
+  background-color: #7925d3;
+  color: #ebe7ef;
 }
